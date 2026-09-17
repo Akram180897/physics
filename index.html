@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KMVPhysics | B.Sc. Physics Study Portal</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="logo">K</span><span><strong>KMVPhysics</strong><small>Physics Study Portal</small></span></a>
+  <a class="admin-link" href="admin.html">Admin</a>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">B.Sc. PHYSICS STUDY PORTAL</span>
+    <h1>Learn Physics.<br><em>Study Smarter.</em></h1>
+    <p>Notes, study material and resources for B.Sc. Physics students — organized by class, subject and topic.</p>
+  </div>
+</section>
+
+<main class="container">
+  <div class="section-title">
+    <div><span class="eyebrow">STUDY MATERIAL</span><h2>Choose your class</h2></div>
+    <span id="status" class="status">Loading…</span>
+  </div>
+  <div id="classes" class="class-grid"></div>
+  <div id="empty" class="empty hidden">No study material has been added yet.</div>
+</main>
+
+<footer>
+  <div><strong>KMVPhysics</strong></div>
+  <div>Created by <strong>Akram Sheikh</strong></div>
+</footer>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

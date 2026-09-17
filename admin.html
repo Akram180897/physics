@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KMVPhysics | Admin</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="logo">K</span><span><strong>KMVPhysics</strong><small>Admin Dashboard</small></span></a>
+  <div class="top-actions"><a class="admin-link" href="index.html">View Site</a><button id="logout" class="outline">Logout</button></div>
+</header>
+
+<main class="container admin-page">
+<section id="loginPanel" class="login-box">
+  <span class="eyebrow">SECURE ADMIN ACCESS</span>
+  <h1>Admin Login</h1>
+  <p>Sign in with the administrator account created in Supabase.</p>
+  <label>Email<input id="email" type="email" autocomplete="username"></label>
+  <label>Password<input id="password" type="password" autocomplete="current-password"></label>
+  <button id="login" class="primary full">Login</button>
+  <p id="loginMsg" class="message"></p>
+</section>
+
+<section id="dashboard" class="hidden">
+  <div class="admin-heading">
+    <div><span class="eyebrow">ADMIN</span><h1>Manage Study Materials</h1><p>Add classes, subjects, topics and PDF files.</p></div>
+    <span id="userEmail" class="pill"></span>
+  </div>
+
+  <div class="admin-grid">
+    <section class="panel">
+      <h2>1. Add Class</h2>
+      <input id="className" placeholder="Example: B.Sc. 1">
+      <button id="addClass" class="primary">Add Class</button>
+      <hr>
+      <h2>Classes</h2>
+      <div id="classList"></div>
+    </section>
+
+    <section class="panel">
+      <h2>2. Add Subject / Subsection</h2>
+      <select id="classSelect"></select>
+      <input id="subjectName" placeholder="Example: Mechanics">
+      <button id="addSubject" class="primary">Add Subject</button>
+      <hr>
+      <h2>3. Upload PDF Note</h2>
+      <select id="subjectSelect"></select>
+      <input id="noteTitle" placeholder="Example: Unit 1 Notes">
+      <input id="noteFile" type="file" accept=".pdf,application/pdf">
+      <button id="uploadNote" class="primary">Upload & Publish</button>
+      <p class="hint">PDF files are stored in Supabase Storage. Students can open them from the public site.</p>
+    </section>
+  </div>
+
+  <section class="panel">
+    <h2>Published Notes</h2>
+    <div id="contentList"></div>
+  </section>
+</section>
+</main>
+
+<script src="config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
